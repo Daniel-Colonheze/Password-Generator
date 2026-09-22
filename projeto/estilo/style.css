@@ -1,0 +1,415 @@
+:root {
+    --fundo: #09090B;
+    --card: #18181B;
+    --input: #1A1A1E;
+    --borda: #27272A;
+    --texto: #FFFFFF;
+    --texto-secundario: #A1A1AA;
+    --texto-terciario: #71717A;
+    --texto-inativo: #3F3F46;
+    --backIcon: #080D29;
+    --primaria: #042dfb;
+    --sucesso: #22C55E;
+    --alerta: #F59E0B;
+    --perigo: #EF4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    background-color: var(--fundo);
+    color: var(--texto);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    gap: 10px;
+    color: var(--texto);
+    font-size: 1rem;
+    border-bottom: 1px solid var(--borda);
+}
+
+#icone1 {
+    color: var(--primaria);
+    background-color: var(--backIcon);
+    padding: 6px;
+    border-radius: 7px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+}
+
+.gerar {
+    position: relative;
+}
+
+#senha {
+    background-color: var(--fundo);
+    color: var(--texto);
+    padding: 12px 44px 12px 12px;
+    border: 1px solid var(--borda);
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.95rem;
+    font-family: "Courier New", monospace;
+}
+
+#senha::placeholder {
+    color: var(--texto-terciario);
+}
+
+#copy {
+    position: absolute;
+    color: var(--texto-terciario);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 4px;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s;
+}
+
+#copy:hover {
+    background-color: var(--borda);
+    color: var(--texto);
+}
+
+.metrica {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.med {
+    height: 5px;
+    background-color: var(--borda);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.med.fraca {
+    background-color: var(--perigo);
+}
+
+.med.media {
+    background-color: var(--alerta);
+}
+
+.med.forte {
+    background-color: var(--sucesso);
+}
+
+#medidor {
+    color: var(--texto-secundario);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+#medidor .valor {
+    color: var(--texto-secundario);
+    font-weight: bold;
+}
+
+#medidor .valor.fraca {
+    color: var(--perigo);
+}
+
+#medidor .valor.media {
+    color: var(--alerta);
+}
+
+#medidor .valor.forte {
+    color: var(--sucesso);
+}
+
+.tam-senha {
+    color: var(--texto);
+    border-bottom: 1px solid var(--borda);
+    border-top: 1px solid var(--borda);
+    padding: 14px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.texto {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+#slider {
+    width: 100%;
+    accent-color: var(--primaria);
+    cursor: pointer;
+}
+
+.lista ul {
+    list-style: none;
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.lista ul li label {
+    color: var(--texto-secundario);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.botaoSenha {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonS {
+    padding: 12px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    background-color: var(--primaria);
+    width: 100%;
+    color: var(--texto);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttonS:hover {
+    background-color: var(--primaria-hover, #0321c4);
+}
+
+.historico {
+    color: var(--texto-secundario);
+    border-top: 1px solid var(--borda);
+    padding-top: 14px;
+}
+
+.historico>p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--texto-terciario);
+    margin-bottom: 10px;
+}
+
+footer {
+    color: var(--texto-terciario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-top: 1px solid var(--borda);
+    padding: 14px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 20px;
+        font-size: 1.1rem;
+        gap: 12px;
+    }
+
+    #icone1 {
+        font-size: 28px;
+        padding: 8px;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    .card {
+        padding: 28px;
+        gap: 24px;
+    }
+
+    #senha {
+        font-size: 1rem;
+        padding: 14px 48px 14px 14px;
+    }
+
+    #copy {
+        font-size: 26px;
+        padding: 8px;
+        right: 6px;
+    }
+
+    .metrica {
+        gap: 10px;
+    }
+
+    .med {
+        height: 6px;
+    }
+
+    #medidor {
+        font-size: 0.9rem;
+    }
+
+    .tam-senha {
+        padding: 18px 0;
+        gap: 14px;
+    }
+
+    .texto {
+        font-size: 1rem;
+    }
+
+    .lista ul {
+        gap: 14px;
+    }
+
+    .lista ul li label {
+        font-size: 1rem;
+    }
+
+    .buttonS {
+        font-size: 1.05rem;
+        padding: 14px;
+        gap: 10px;
+    }
+
+    .historico {
+        padding-top: 18px;
+    }
+
+    .historico>p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    footer {
+        padding: 18px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header {
+        padding: 24px;
+        font-size: 1.2rem;
+        gap: 14px;
+    }
+
+    #icone1 {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    main {
+        padding: 60px;
+    }
+
+    .card {
+        padding: 36px;
+        gap: 28px;
+    }
+
+    #senha {
+        font-size: 1.05rem;
+        padding: 16px 52px 16px 16px;
+    }
+
+    #copy {
+        font-size: 28px;
+        padding: 9px;
+        right: 8px;
+    }
+
+    .metrica {
+        gap: 12px;
+    }
+
+    .med {
+        height: 7px;
+    }
+
+    #medidor {
+        font-size: 0.95rem;
+    }
+
+    .tam-senha {
+        padding: 22px 0;
+        gap: 16px;
+    }
+
+    .texto {
+        font-size: 1.05rem;
+    }
+
+    .lista ul {
+        gap: 16px;
+    }
+
+    .lista ul li label {
+        font-size: 1.05rem;
+    }
+
+    .buttonS {
+        font-size: 1.1rem;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .historico {
+        padding-top: 22px;
+    }
+
+    .historico>p {
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+    }
+
+    footer {
+        padding: 22px;
+        font-size: 0.9rem;
+    }
+}
