@@ -202,11 +202,6 @@ main {
     cursor: pointer;
 }
 
-.botaoSenha {
-    display: flex;
-    justify-content: center;
-}
-
 .buttonS {
     padding: 12px;
     font-size: 0.95rem;
@@ -239,12 +234,6 @@ main {
     letter-spacing: 1px;
     color: var(--texto-terciario);
     margin-bottom: 10px;
-}
-
-.lista ul li label {
-    color: var(--texto-secundario);
-    font-size: 0.875rem;
-    cursor: pointer;
 }
 
 
@@ -282,13 +271,6 @@ main {
     left: calc(100% - 21px);
 }
 
-.med.media {
-    background-color: var(--alerta);
-}
-
-.med.fraca {
-    background-color: var(--perigo);
-}
 
 li {
     list-style-type: decimal;
@@ -297,22 +279,6 @@ li {
 
 .med.media {
     background-color: var(--alerta);
-}
-
-.med.forte {
-    background-color: var(--sucesso);
-}
-
-#medidor .valor.fraca {
-    color: var(--perigo);
-}
-
-#medidor .valor.media {
-    color: var(--alerta);
-}
-
-#medidor .valor.forte {
-    color: var(--sucesso);
 }
 
 footer {
