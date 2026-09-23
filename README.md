@@ -2,8 +2,6 @@
 
 Gerador de senhas aleatórias com controle de tamanho, tipos de caracteres e análise de força. Feito com HTML, CSS e JavaScript puro.
 
-![Preview do projeto](./preview.png)
-
 ---
 
 ## ✨ Funcionalidades
