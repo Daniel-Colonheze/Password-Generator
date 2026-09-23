@@ -13,7 +13,7 @@ Gerador de senhas aleatórias com controle de tamanho, tipos de caracteres e an�
   - Números (0-9)
   - Símbolos (!@#$%...)
 - **Análise de força** em tempo real:
-  - Fraca (1 barra vermelha)
+  - Fraca (1 barra vermelha)  
   - Média (2 barras amarelas)
   - Forte (3 barras verdes)
 - **Cópia rápida** para a área de transferência
@@ -34,3 +34,27 @@ Sem frameworks, sem bibliotecas. Apenas o básico do front-end.
 ---
 
 ## 📁 Estrutura do projeto
+password-generator/
+├── index.html
+├── css/
+│ └── style.css
+├── js/
+│ └── script.js
+├── assets/
+│ └── favicon.ico
+└── README.md
+
+
+---
+
+## 🚀 Como rodar
+
+Como o projeto usa `<script type="module">`, **precisa de um servidor local**.
+
+**Com VSCode:**
+1. Instale a extensão **Live Server**
+2. Clique com botão direito no `index.html` → **Open with Live Server**
+
+**Com Node.js:**
+```bash
+npx serve
