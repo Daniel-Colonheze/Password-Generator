@@ -19,7 +19,6 @@ Gerador de senhas aleatórias com controle de tamanho, tipos de caracteres e an�
 - **Cópia rápida** para a área de transferência
 - **Histórico** das últimas senhas geradas
 - **Design responsivo** (mobile, tablet, desktop)
-- **Dark mode** com paleta customizável via CSS variables
 
 ---
 
