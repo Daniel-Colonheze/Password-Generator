@@ -38,7 +38,10 @@
             <div class="tam-senha">
                 <div class="texto">
                     <p>Tamanho da senha</p>
-                    <p id="quantidade">8 caracteres</p>
+                    <div class="variavel">
+                        <p id="quantidade">8 </p>
+                        <p>caracteres</p>
+                    </div>
                 </div>
                 <input type="range" min="8" max="64" value="16" id="slider">
             </div>
@@ -73,6 +76,9 @@
 
             <div class="historico">
                 <p>Últimas senhas geradas</p>
+
+                <ul id="lista-historico">
+                </ul>
             </div>
 
         </div>

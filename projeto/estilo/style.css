@@ -170,6 +170,11 @@ main {
     font-size: 0.9rem;
 }
 
+.variavel {
+    display: flex;
+    gap: 10px;
+}
+
 #slider {
     width: 100%;
     accent-color: var(--primaria);
@@ -236,6 +241,80 @@ main {
     margin-bottom: 10px;
 }
 
+.lista ul li label {
+    color: var(--texto-secundario);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+
+.lista ul li input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 44px;
+    height: 24px;
+    background-color: var(--borda);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.lista ul li input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: var(--texto);
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: left 0.2s;
+}
+
+.lista ul li input[type="checkbox"]:checked {
+    background-color: var(--primaria);
+}
+
+.lista ul li input[type="checkbox"]:checked::before {
+    left: calc(100% - 21px);
+}
+
+.med.media {
+    background-color: var(--alerta);
+}
+
+.med.fraca {
+    background-color: var(--perigo);
+}
+
+li {
+    list-style-type: decimal;
+    overflow-wrap: anywhere;
+}
+
+.med.media {
+    background-color: var(--alerta);
+}
+
+.med.forte {
+    background-color: var(--sucesso);
+}
+
+#medidor .valor.fraca {
+    color: var(--perigo);
+}
+
+#medidor .valor.media {
+    color: var(--alerta);
+}
+
+#medidor .valor.forte {
+    color: var(--sucesso);
+}
+
 footer {
     color: var(--texto-terciario);
     display: flex;
@@ -288,6 +367,8 @@ footer {
     .med {
         height: 6px;
     }
+
+
 
     #medidor {
         font-size: 0.9rem;
