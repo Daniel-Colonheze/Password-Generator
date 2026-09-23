@@ -35,15 +35,18 @@ Sem frameworks, sem bibliotecas. Apenas o básico do front-end.
 
 ## 📁 Estrutura do projeto
 
-password-generator/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── assets/
-│   └── favicon.ico
+```
+Password-Generator/
+├── projeto/
+│   ├── estilo/
+│   │   └── style.css
+│   ├── js/
+│   │   └── script.js
+│   └── index.html
+├── .gitattributes
+├── LICENSE
 └── README.md
+```
 
 
 ---
